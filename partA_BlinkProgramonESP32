@@ -1,0 +1,17 @@
+// Lab 1 - Blink + Serial Communication
+int ledPin = 2;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(115200); // Initialize serial communication
+}
+
+void loop() {
+  digitalWrite(ledPin, HIGH);
+  Serial.println("Recieved: LED ON"); // Send message
+  delay(1000);
+
+  digitalWrite(ledPin, LOW);
+  Serial.println("Recieved: LED OFF"); // Send message
+  delay(1000);
+}
